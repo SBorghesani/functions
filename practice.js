@@ -99,3 +99,28 @@ if (didSvenHookATuna()) {
 
 // -------------------------------------
 
+const searchTerm = "Collie";
+
+dogs = [
+    {
+        type: "dog",
+        kind: "Collie"
+    },
+    {
+        type: "cat",
+        kind: "chesire"
+    }
+]
+
+const favoriteDog = (dogArray) => {
+    for (const dog of dogArray) {
+        if (dog.kind === searchTerm) {
+            return `My favorite dog is a ${dog.kind}`;
+        } else {
+            return `I like cats`;
+        }
+    }
+}
+
+const favDogResult = favoriteDog(dogs);
+console.log(favDogResult);
